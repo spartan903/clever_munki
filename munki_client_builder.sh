@@ -59,19 +59,29 @@ else
 echo "munki repo name set to $munki_repo_name."
 fi
 
+# Saving typing time
+defaults_path="/Library/Preferences/ManagedInstalls"
+software_repo_url="http://$munki_url/$munki_repo_name"
+apple_update_flag="InstallAppleSoftwareUpdates"
+#Set to either 0 for False, 1 for true
+munki_apple_updates="1"
+
 # Setting the SoftwareRepoURL 
-softwarerepourl="http://$munki_url/$munki_repo_name"
-echo "Setting Software Repo to: $softwarerepourl."
-sudo defaults write /Library/Preferences/ManagedInstalls SoftwareRepoURL $softwarerepourl
+echo "Setting Software Repo to: $software_repo_url."
+sudo defaults write $defaults_path SoftwareRepoURL $software_repo_url
 confirm_repo_url=$(defaults read /Library/Preferences/ManagedInstalls SoftwareRepoURL)
 
 # Setting the Client Identifier
 read -p "What is the Client Identifier?: " munki_client_id
 echo "Setting the Client Identifier to: $munki_client_id".
-sudo defaults write /Library/Preferences/ManagedInstalls ClientIdentifier $munki_client_id
+sudo defaults write $defaults_path ClientIdentifier $munki_client_id
 confirm_repo_client_id=$(defaults read /Library/Preferences/ManagedInstalls ClientIdentifier)
 
 # Setting Apple Updates
+# Uncomment below if Apple Updates are included in Munki's updates
+# sudo defaults write $defaults_path $apple_update_flag $munki_apple_updates
+
+#Settings so far
 echo "Here are your current settings: "
 echo "SoftwareRepoURL: $confirm_repo_url"
 echo "ClientIdentifier: $confirm_repo_client_id" 
