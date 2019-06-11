@@ -75,6 +75,7 @@ enable_apache_index () {
       echo "Homebrew installed."
     fi
 
+    #gsed is needed because Mac version of sed doesn't work as well
     echo "Checking for gsed..."
     if [ -e /usr/local/bin/gsed ]; then
       echo "gsed installed."
@@ -138,6 +139,7 @@ fi
 
 #Installing Munkitoolset
 sudo installer -pkg /tmp/munkitools-${pkg_url}.pkg -target /
+sudo rm /tmp/munkitools*
 }
 
 #This function requires functions 'check_shared_dir', 'munki_repo_build', 'apache_work', 'enable_apache_index', ''
@@ -182,12 +184,5 @@ restart_function() {
 }
 
 
-#Main Section - requires 'munki_buildmenow munki_installer'
-
-#if [ -d /usr/local/munki ]; then
-#munki_buildmenow
-#else
-#echo "munki already installed or in another directory."
-#fi
-
+# Main Section
 munki_buildmenow
