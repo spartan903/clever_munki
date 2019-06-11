@@ -41,11 +41,12 @@ fi
 
 #Installing Munkitoolset
 sudo installer -pkg /tmp/munkitools-${pkg_url}.pkg -target /
+sudo rm /tmp/munkit*
+PATH=$PATH\:/usr/local/munki ; export PATH
 }
 
 echo "Installing pre-reqs..."
 munki_installer
-sudo rm /tmp/munkit*
 echo "Pre-reqs installed!"
 
 # Setting variables for munki url
