@@ -96,7 +96,7 @@ apache_work () {
 
     echo "Setting sym links to repo"
     #Allow Apache to serve munki repo directory via HTTP using sym links
-    sudo ln -s /Users/Shared/munki_repo /Library/Webserver/Documents
+    sudo ln -s /Users/Shared/munki_repo /Library/WebServer/Documents
 }
 
 # Munki Installer
