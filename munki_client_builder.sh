@@ -34,12 +34,12 @@ cd /tmp
 read -p "Please enter the version number (Hit Enter to install 3.6.3.3784 ): " pkg_url
 if [ "$pkg_url" == "" ]; then
 pkg_url="3.6.3.3784"
-sudo wget https://github.com/munki/munki/releases/download/v3.6.2/munkitools-3.6.3.3784.pkg
+sudo wget https://github.com/munki/munki/releases/download/v3.6.3/munkitools-3.6.3.3784.pkg
 else
-sudo wget https://github.com/munki/munki/releases/download/v3.6.2/munkitools-${pkg_url}.pkg
+sudo wget https://github.com/munki/munki/releases/download/v3.6.3/munkitools-${pkg_url}.pkg
 fi
 
-#Installing Munkitoolset
+##Installing Munkitoolset
 sudo installer -pkg /tmp/munkitools-${pkg_url}.pkg -target /
 sudo rm /tmp/munkit*
 PATH=$PATH\:/usr/local/munki ; export PATH
