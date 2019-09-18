@@ -39,7 +39,7 @@ else
 sudo wget https://github.com/munki/munki/releases/download/v3.6.3/munkitools-${pkg_url}.pkg
 fi
 
-#Installing Munkitoolset
+##Installing Munkitoolset
 sudo installer -pkg /tmp/munkitools-${pkg_url}.pkg -target /
 sudo rm /tmp/munkit*
 PATH=$PATH\:/usr/local/munki ; export PATH

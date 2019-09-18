@@ -143,7 +143,7 @@ sudo rm /tmp/munkitools*
 PATH=$PATH\:/usr/local/munki ; export PATH
 }
 
-#This function requires functions 'check_shared_dir', 'munki_repo_build', 'apache_work', 'enable_apache_index', ''
+##This function requires functions 'check_shared_dir', 'munki_repo_build', 'apache_work', 'enable_apache_index', ''
 munki_buildmenow(){
 check_shared_dir
 munki_installer
