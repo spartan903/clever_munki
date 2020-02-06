@@ -129,12 +129,12 @@ for item in $stuffitems
 
 echo "Changing to '/tmp' folder"
 cd /tmp
-read -p "Please enter the version number (Hit Enter to install 3.6.3.3784 ): " pkg_url
+read -p "Please enter the version number (Hit Enter to install 4.0.1.3899 ): " pkg_url
 if [ "$pkg_url" == "" ]; then
-pkg_url="3.6.3.3784"
-sudo wget https://github.com/munki/munki/releases/download/v3.6.3/munkitools-3.6.3.3784.pkg
+pkg_url="4.0.1.3899"
+sudo wget https://github.com/munki/munki/releases/download/v4.0.1/munkitools-4.0.1.3899.pkg
 else
-sudo wget https://github.com/munki/munki/releases/download/v3.6.3/munkitools-${pkg_url}.pkg
+sudo wget https://github.com/munki/munki/releases/download/v4.0.1/munkitools-${pkg_url}.pkg
 fi
 
 #Installing Munkitoolset
