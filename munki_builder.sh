@@ -129,12 +129,12 @@ for item in $stuffitems
 
 echo "Changing to '/tmp' folder"
 cd /tmp
-read -p "Please enter the version number (Hit Enter to install 5.1.1.4112 ): " pkg_url
+read -p "Please enter the version number (Hit Enter to install 5.2.3.4295 ): " pkg_url
 if [ "$pkg_url" == "" ]; then
-pkg_url="5.1.1.4112"
-sudo wget https://github.com/munki/munki/releases/download/v5.1.1/munkitools-5.1.1.4112.pkg
+pkg_url="5.2.3.4295"
+sudo wget https://github.com/munki/munki/releases/download/v5.2.3/munkitools-5.2.3.4295.pkg
 else
-sudo wget https://github.com/munki/munki/releases/download/v5.1.1/munkitools-${pkg_url}.pkg
+sudo wget https://github.com/munki/munki/releases/download/v5.2.3/munkitools-${pkg_url}.pkg
 fi
 
 #Installing Munkitoolset
