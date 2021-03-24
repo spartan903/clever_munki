@@ -4,7 +4,7 @@
 
 * This will automatically setup and install a munki server. Also included is an uninstaller that will undo any of the changes created by the builder script.
 * Configures client side settings.
-* Munki Version: 5.1.1.4112
+* Munki Version: 5.2.3.4295
 
 ## Prereqs
 
