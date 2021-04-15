@@ -26,6 +26,8 @@
     * The name of your munki repo (default is munki_repo)
     * Set permissions on the script to allow it to run `sudo chmod a+x munki_client_builder.sh`
 
+* If you are getting configuration errors after the initial install, you may need to restart your machine.
+
 
 ## Uninstall Instructions
 
